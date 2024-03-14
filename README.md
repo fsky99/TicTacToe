@@ -1,4 +1,4 @@
-# MemoryGame
+#  Tic Tac Toe (Using MiniMax)
 
 ## Date : 2023
 
