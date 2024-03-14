@@ -15,7 +15,7 @@ this game was made by using minimax algorithm.
 
 ### **_Game Link:_**
 
-##### Live Link: [TicTacToe]()
+##### Live Link: [TicTacToe](https://extraordinary-gingersnap-088593.netlify.app/)
 
 ---
 
