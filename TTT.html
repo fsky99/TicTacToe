@@ -1,0 +1,89 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="TTT.css">
+</head>
+
+<body> 
+<br><br><br><br><br><br><br>
+
+<div class="button-container">
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <h3 class="Titlee">Tic Tac Toe</h3>
+      <h3>Chose X or O to start with</h3>
+  <select id="playerSelect">
+    <option value="X">X</option>
+    <option value="O">O</option>
+  </select>
+  <br><br>
+  <div class="buttonDiv">
+  <button class="btn" type="button" onclick="startGame()">
+    <strong>Start</strong>
+    <div id="container-stars">
+      <div id="stars"></div>
+    </div>
+  
+    <div id="glow">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </button>
+</div>
+  
+</div>
+
+<div class="board-container" style="display: none;">
+  <div class="board">
+    <table>
+      <tr>
+        <td onclick="cellClicked(0)" id="0"></td>
+        <td onclick="cellClicked(1)" id="1"></td>
+        <td onclick="cellClicked(2)" id="2"></td>
+      </tr>
+      <tr>
+        <td onclick="cellClicked(3)" id="3"></td>
+        <td onclick="cellClicked(4)" id="4"></td>
+        <td onclick="cellClicked(5)" id="5"></td>
+      </tr>
+      <tr>
+        <td onclick="cellClicked(6)" id="6"></td>
+        <td onclick="cellClicked(7)" id="7"></td>
+        <td onclick="cellClicked(8)" id="8"></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<script src="TTT.js"></script>
+<script>
+  function startGame() {
+    const playerSelect = document.getElementById("playerSelect");
+    const selectedOption = playerSelect.options[playerSelect.selectedIndex].value;
+    user = selectedOption;
+    ai = selectedOption === "X" ? "O" : "X";
+
+    const buttonContainer = document.querySelector(".button-container");
+    buttonContainer.style.display = "none";
+    document.querySelector(".Titlee").style.display = "none"
+
+    const boardContainer = document.querySelector(".board-container");
+    boardContainer.style.display = "block";
+
+    const startOverButton = document.querySelector(".StartOverbutton");
+    startOverButton.style.display = "inline-block";
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
